@@ -90,8 +90,8 @@ tbody tr:last-child td{border-bottom:none}
 tbody tr:hover td{background:#f8fafc}
 .status-bar{width:4px;padding:0!important}
 .cod{color:#004aad;font-weight:600;font-size:11px;white-space:nowrap}
-.imovel-name{font-weight:600;font-size:13px;max-width:155px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.imovel-addr{font-size:11px;color:#64748b;max-width:155px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:1px}
+.imovel-name{font-weight:600;font-size:13px;max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.imovel-addr{font-size:11px;color:#64748b;max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:1px}
 .noname{font-style:italic;color:#cbd5e1;font-weight:400}
 .apto-main{font-size:12px;font-weight:600;white-space:nowrap}
 .bloco-sub{font-size:10px;color:#64748b;margin-top:1px}
@@ -110,8 +110,8 @@ tbody tr:hover td{background:#f8fafc}
 .actions{display:flex;gap:3px;white-space:nowrap}
 .act-edit{color:#004aad;font-size:12px;font-weight:500;border:1px solid #c7d9f5;border-radius:6px;padding:5px 8px;background:none;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:3px}
 .act-edit:hover{background:#eff6ff}
-.act-del{color:#ef4444;font-size:13px;background:none;border:none;cursor:pointer;padding:5px 6px;border-radius:6px}
-.act-del:hover{background:#fee2e2}
+.act-del{color:#ef4444;font-size:13px;background:#fee2e2;border:1px solid #fecaca;cursor:pointer;padding:5px 8px;border-radius:6px;display:flex;align-items:center}
+.act-del:hover{background:#fca5a5}
 .empty{padding:48px;text-align:center;color:#94a3b8}
 .empty i{font-size:36px;display:block;margin-bottom:10px}
 
@@ -584,7 +584,7 @@ function renderTable() {
       <td><span class="badge ${b.cls}"><span class="dot"></span>${p.status}</span></td>
       <td><div class="actions">
         <button class="act-edit" onclick="openEdit('${p.id}')"><i class="ti ti-edit"></i> Editar</button>
-        <button class="act-del" onclick="askDelete('${p.id}')"><i class="ti ti-trash"></i></button>
+        <button class="act-del" onclick="askDelete('${p.id}')"><i class="ti ti-x"></i></button>
       </div></td>
     </tr>`;
   }).join('');
